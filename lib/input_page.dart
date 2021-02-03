@@ -38,7 +38,7 @@ class _InputPageState extends State<InputPage> {
                     color: activeCardColor,
                     cardChild: GenderCardChild(
                       icon: FontAwesomeIcons.mars,
-                      text: 'MALE',
+                      label: 'MALE',
                     ),
                   ),
                 ),
@@ -47,7 +47,7 @@ class _InputPageState extends State<InputPage> {
                     color: activeCardColor,
                     cardChild: GenderCardChild(
                       icon: FontAwesomeIcons.venus,
-                      text: 'FEMALE',
+                      label: 'FEMALE',
                     ),
                   ),
                 ),
