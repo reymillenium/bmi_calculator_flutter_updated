@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 class ReusableCard extends StatelessWidget {
   // Properties:
   final Color color;
+  final Widget cardChild;
 
   // Constructor
-  ReusableCard({@required this.color});
+  ReusableCard({@required this.color, this.cardChild});
 
   @override
   Widget build(BuildContext context) {
@@ -15,6 +16,7 @@ class ReusableCard extends StatelessWidget {
         color: color,
         borderRadius: BorderRadius.circular(10.0),
       ),
+      child: Center(child: cardChild),
     );
   }
 }

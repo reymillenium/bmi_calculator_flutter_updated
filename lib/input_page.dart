@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'reusable_card.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 const double bottomContainerHeight = 80.0;
 const Color activeCardColor = Color(0xFF1D1E33);
@@ -31,11 +32,49 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ReusableCard(
                     color: activeCardColor,
+                    cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        FaIcon(
+                          FontAwesomeIcons.mars,
+                          size: 80.0,
+                        ),
+                        SizedBox(
+                          height: 15.0,
+                        ),
+                        Text(
+                          'MALE',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Color(0xFF8D8E98),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
                     color: activeCardColor,
+                    cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        FaIcon(
+                          FontAwesomeIcons.venus,
+                          size: 80.0,
+                        ),
+                        SizedBox(
+                          height: 15.0,
+                        ),
+                        Text(
+                          'FEMALE',
+                          style: TextStyle(
+                            fontSize: 18,
+                            color: Color(0xFF8D8E98),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],
