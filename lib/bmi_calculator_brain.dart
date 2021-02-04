@@ -7,6 +7,24 @@ const Color activeCardColor = Color(0xFF1D1E33);
 const Color inactiveCardColor = Color(0xFF111328);
 const Color bottomContainerColor = Color(0xFFEB1555);
 
+// Enums:
+enum Gender { male, female }
+
+extension GenderExtension on Gender {
+  bool get isMale {
+    switch (this) {
+      case Gender.male:
+        return true;
+      default:
+        return false;
+    }
+  }
+
+  bool get isFemale {
+    return !this.isMale;
+  }
+}
+
 class BMICalculatorBrain {
   // Private Properties
   Color _maleCardColor;
@@ -30,8 +48,8 @@ class BMICalculatorBrain {
   }
 
   // Public methods:
-  void toggleGenderCards(String activeCardGender) {
-    if (activeCardGender == 'male') {
+  void toggleGenderCards(Gender gender) {
+    if (gender.isMale) {
       _pressedMaleCard = !_pressedMaleCard;
       _pressedFemaleCard = false;
     } else {

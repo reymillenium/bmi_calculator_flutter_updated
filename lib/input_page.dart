@@ -36,7 +36,7 @@ class _InputPageState extends State<InputPage> {
                   child: GestureDetector(
                     onTap: () {
                       setState(() {
-                        bmiCalculatorBrain.toggleGenderCards('male');
+                        bmiCalculatorBrain.toggleGenderCards(Gender.male);
                       });
                     },
                     child: ReusableCard(
@@ -52,7 +52,7 @@ class _InputPageState extends State<InputPage> {
                   child: GestureDetector(
                     onTap: () {
                       setState(() {
-                        bmiCalculatorBrain.toggleGenderCards('female');
+                        bmiCalculatorBrain.toggleGenderCards(Gender.female);
                       });
                     },
                     child: ReusableCard(
