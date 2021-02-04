@@ -3,12 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 // Components:
+import 'bmi_calculator_brain.dart';
 import 'reusable_card.dart';
 import 'gender_card_child.dart';
 
-const double bottomContainerHeight = 80.0;
-const Color activeCardColor = Color(0xFF1D1E33);
-const Color bottomContainerColor = Color(0xFFEB1555);
+BMICalculatorBrain bmiCalculatorBrain = BMICalculatorBrain();
 
 class InputPage extends StatefulWidget {
   InputPage({Key key, this.title}) : super(key: key);
@@ -34,20 +33,34 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                  child: ReusableCard(
-                    color: activeCardColor,
-                    cardChild: GenderCardChild(
-                      icon: FontAwesomeIcons.mars,
-                      label: 'MALE',
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        bmiCalculatorBrain.toggleGenderCards('male');
+                      });
+                    },
+                    child: ReusableCard(
+                      color: bmiCalculatorBrain.getMaleCardColor(),
+                      cardChild: GenderCardChild(
+                        icon: FontAwesomeIcons.mars,
+                        label: 'MALE',
+                      ),
                     ),
                   ),
                 ),
                 Expanded(
-                  child: ReusableCard(
-                    color: activeCardColor,
-                    cardChild: GenderCardChild(
-                      icon: FontAwesomeIcons.venus,
-                      label: 'FEMALE',
+                  child: GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        bmiCalculatorBrain.toggleGenderCards('female');
+                      });
+                    },
+                    child: ReusableCard(
+                      color: bmiCalculatorBrain.getFemaleCardColor(),
+                      cardChild: GenderCardChild(
+                        icon: FontAwesomeIcons.venus,
+                        label: 'FEMALE',
+                      ),
                     ),
                   ),
                 ),

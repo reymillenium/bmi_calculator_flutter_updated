@@ -1,4 +1,7 @@
+// Packages:
 import 'package:flutter/material.dart';
+
+// Components:
 import 'input_page.dart';
 
 void main() {
