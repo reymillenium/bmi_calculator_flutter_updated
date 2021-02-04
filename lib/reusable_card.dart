@@ -5,7 +5,7 @@ class ReusableCard extends StatelessWidget {
   // Properties:
   final Color color;
   final Widget cardChild;
-  final Function onTapEvent;
+  final VoidCallback onTapEvent;
 
   // Constructor
   ReusableCard({@required this.color, this.cardChild, this.onTapEvent});
