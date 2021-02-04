@@ -33,35 +33,31 @@ class _InputPageState extends State<InputPage> {
             child: Row(
               children: [
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
+                  child: ReusableCard(
+                    color: bmiCalculatorBrain.getMaleCardColor(),
+                    cardChild: GenderCardChild(
+                      icon: FontAwesomeIcons.mars,
+                      label: 'MALE',
+                    ),
+                    onTapEvent: () {
                       setState(() {
                         bmiCalculatorBrain.toggleGenderCards(Gender.male);
                       });
                     },
-                    child: ReusableCard(
-                      color: bmiCalculatorBrain.getMaleCardColor(),
-                      cardChild: GenderCardChild(
-                        icon: FontAwesomeIcons.mars,
-                        label: 'MALE',
-                      ),
-                    ),
                   ),
                 ),
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
+                  child: ReusableCard(
+                    color: bmiCalculatorBrain.getFemaleCardColor(),
+                    cardChild: GenderCardChild(
+                      icon: FontAwesomeIcons.venus,
+                      label: 'FEMALE',
+                    ),
+                    onTapEvent: () {
                       setState(() {
                         bmiCalculatorBrain.toggleGenderCards(Gender.female);
                       });
                     },
-                    child: ReusableCard(
-                      color: bmiCalculatorBrain.getFemaleCardColor(),
-                      cardChild: GenderCardChild(
-                        icon: FontAwesomeIcons.venus,
-                        label: 'FEMALE',
-                      ),
-                    ),
                   ),
                 ),
               ],
