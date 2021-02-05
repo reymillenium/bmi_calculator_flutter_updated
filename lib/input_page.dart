@@ -6,6 +6,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'bmi_calculator_brain.dart';
 import 'reusable_card.dart';
 import 'gender_card_child.dart';
+import 'constants.dart';
 
 BMICalculatorBrain bmiCalculatorBrain = BMICalculatorBrain();
 
@@ -69,6 +70,12 @@ class _InputPageState extends State<InputPage> {
             child: Expanded(
               child: ReusableCard(
                 color: activeCardColor,
+                cardChild: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('HEIGHT'),
+                  ],
+                ),
               ),
             ),
           ),
