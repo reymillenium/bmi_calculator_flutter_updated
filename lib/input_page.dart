@@ -26,6 +26,7 @@ class _InputPageState extends State<InputPage> {
         title: Text(widget.title),
       ),
       body: Column(
+        // crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           // Row # 1: Gender Cards
           Expanded(
@@ -77,6 +78,19 @@ class _InputPageState extends State<InputPage> {
                     'HEIGHT',
                     style: kLabelTextStyle,
                   ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Text(
+                        '127',
+                        style: kHeightAmountTextStyle,
+                      ),
+                      Text(
+                        'cm',
+                      ),
+                    ],
+                  )
                 ],
               ),
             ),
