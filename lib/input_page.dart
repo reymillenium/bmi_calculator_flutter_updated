@@ -176,6 +176,41 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ReusableCard(
                     color: kActiveCardColor,
+                    cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'AGE',
+                          style: kLabelTextStyle,
+                        ),
+                        Text(
+                          bmiCalculatorBrain.age.toString(),
+                          style: kHeightAmountTextStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            RoundIconButton(
+                                icon: FontAwesomeIcons.minus,
+                                onPressed: () {
+                                  setState(() {
+                                    bmiCalculatorBrain.reduceAge();
+                                  });
+                                }),
+                            SizedBox(
+                              width: 20.0,
+                            ),
+                            RoundIconButton(
+                                icon: FontAwesomeIcons.plus,
+                                onPressed: () {
+                                  setState(() {
+                                    bmiCalculatorBrain.increaseAge();
+                                  });
+                                }),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ],

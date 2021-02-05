@@ -30,6 +30,7 @@ class BMICalculatorBrain {
   bool _pressedFemaleCard = false;
   int height = 170;
   int weight = 60;
+  int age = 19;
 
   // Constructor
   BMICalculatorBrain() {
@@ -53,6 +54,15 @@ class BMICalculatorBrain {
 
   void increaseWeight() {
     weight++;
+  }
+
+  // Setters
+  void reduceAge() {
+    age--;
+  }
+
+  void increaseAge() {
+    age++;
   }
 
   // Public methods:
