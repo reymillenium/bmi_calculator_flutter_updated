@@ -8,6 +8,7 @@ import 'bmi_calculator_brain.dart';
 import 'reusable_card.dart';
 import 'gender_card_child.dart';
 import 'constants.dart';
+import 'round_icon_button.dart';
 
 BMICalculatorBrain bmiCalculatorBrain = BMICalculatorBrain();
 
@@ -147,33 +148,23 @@ class _InputPageState extends State<InputPage> {
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
-                            FloatingActionButton(
-                              backgroundColor: kActiveCardColor,
-                              child: Icon(
-                                FontAwesomeIcons.minus,
-                                color: Colors.white,
-                              ),
-                              onPressed: () {
-                                setState(() {
-                                  bmiCalculatorBrain.reduceWeight();
-                                });
-                              },
-                            ),
+                            RoundIconButton(
+                                icon: FontAwesomeIcons.minus,
+                                onPressed: () {
+                                  setState(() {
+                                    bmiCalculatorBrain.reduceWeight();
+                                  });
+                                }),
                             SizedBox(
                               width: 20.0,
                             ),
-                            FloatingActionButton(
-                              backgroundColor: kActiveCardColor,
-                              child: Icon(
-                                FontAwesomeIcons.plus,
-                                color: Colors.white,
-                              ),
-                              onPressed: () {
-                                setState(() {
-                                  bmiCalculatorBrain.increaseWeight();
-                                });
-                              },
-                            ),
+                            RoundIconButton(
+                                icon: FontAwesomeIcons.plus,
+                                onPressed: () {
+                                  setState(() {
+                                    bmiCalculatorBrain.increaseWeight();
+                                  });
+                                }),
                           ],
                         )
                       ],
@@ -200,13 +191,6 @@ class _InputPageState extends State<InputPage> {
           ),
         ],
       ),
-
-      // floatingActionButton
-      // floatingActionButton: FloatingActionButton(
-      //   onPressed: () {},
-      //   tooltip: 'Increment',
-      //   child: Icon(Icons.add),
-      // ),
     );
   }
 }
