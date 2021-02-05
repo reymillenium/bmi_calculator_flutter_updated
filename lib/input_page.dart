@@ -98,12 +98,25 @@ class _InputPageState extends State<InputPage> {
                     data: SliderThemeData(
                       activeTrackColor: Colors.white,
                       inactiveTrackColor: kLabelTextColor,
+                      thumbColor: kBottomContainerColor,
+                      overlayColor: kTranslucentBottomContainerColor,
                       trackHeight: 1,
                       thumbShape: RoundSliderThumbShape(
                         enabledThumbRadius: 16,
                       ),
-                      thumbColor: kBottomContainerColor,
+                      overlayShape: RoundSliderOverlayShape(
+                        overlayRadius: 30,
+                      ),
                     ),
+                    // data: SliderTheme.of(context).copyWith(
+                    //   activeTrackColor: Colors.white,
+                    //   inactiveTrackColor: kLabelTextColor,
+                    //   trackHeight: 1,
+                    //   thumbShape: RoundSliderThumbShape(
+                    //     enabledThumbRadius: 16,
+                    //   ),
+                    //   thumbColor: kBottomContainerColor,
+                    // ),
                     child: Slider(
                       // label: '${bmiCalculatorBrain.height}',
                       value: bmiCalculatorBrain.height.toDouble(),
