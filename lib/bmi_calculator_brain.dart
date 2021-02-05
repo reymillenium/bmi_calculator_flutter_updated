@@ -31,8 +31,8 @@ class BMICalculatorBrain {
 
   // Constructor
   BMICalculatorBrain() {
-    this._maleCardColor = inactiveCardColor;
-    this._femaleCardColor = inactiveCardColor;
+    this._maleCardColor = kInactiveCardColor;
+    this._femaleCardColor = kInactiveCardColor;
   }
 
   // Getters:
@@ -58,7 +58,7 @@ class BMICalculatorBrain {
 
   // Private methods:
   void _updateColors() {
-    _maleCardColor = _pressedMaleCard ? activeCardColor : inactiveCardColor;
-    _femaleCardColor = _pressedFemaleCard ? activeCardColor : inactiveCardColor;
+    _maleCardColor = _pressedMaleCard ? kActiveCardColor : kInactiveCardColor;
+    _femaleCardColor = _pressedFemaleCard ? kActiveCardColor : kInactiveCardColor;
   }
 }

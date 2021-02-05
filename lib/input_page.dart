@@ -69,7 +69,7 @@ class _InputPageState extends State<InputPage> {
           Expanded(
             child: Expanded(
               child: ReusableCard(
-                color: activeCardColor,
+                color: kActiveCardColor,
                 cardChild: Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -86,12 +86,12 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: ReusableCard(
-                    color: activeCardColor,
+                    color: kActiveCardColor,
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
-                    color: activeCardColor,
+                    color: kActiveCardColor,
                   ),
                 ),
               ],
@@ -100,10 +100,10 @@ class _InputPageState extends State<InputPage> {
 
           // Bottom Container:
           Container(
-            color: bottomContainerColor,
+            color: kBottomContainerColor,
             margin: EdgeInsets.only(top: 10.0),
             width: double.infinity,
-            height: bottomContainerHeight,
+            height: kBottomContainerHeight,
           ),
         ],
       ),
