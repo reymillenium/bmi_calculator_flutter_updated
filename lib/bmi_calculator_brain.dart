@@ -29,6 +29,7 @@ class BMICalculatorBrain {
   bool _pressedMaleCard = false;
   bool _pressedFemaleCard = false;
   int height = 170;
+  int weight = 60;
 
   // Constructor
   BMICalculatorBrain() {
@@ -43,6 +44,15 @@ class BMICalculatorBrain {
 
   Color getFemaleCardColor() {
     return _femaleCardColor;
+  }
+
+  // Setters
+  void reduceWeight() {
+    weight--;
+  }
+
+  void increaseWeight() {
+    weight++;
   }
 
   // Public methods:

@@ -100,7 +100,7 @@ class _InputPageState extends State<InputPage> {
                       inactiveTrackColor: kLabelTextColor,
                       thumbColor: kBottomContainerColor,
                       overlayColor: kTranslucentBottomContainerColor,
-                      trackHeight: 1,
+                      trackHeight: 2,
                       thumbShape: RoundSliderThumbShape(
                         enabledThumbRadius: 16,
                       ),
@@ -108,21 +108,11 @@ class _InputPageState extends State<InputPage> {
                         overlayRadius: 30,
                       ),
                     ),
-                    // data: SliderTheme.of(context).copyWith(
-                    //   activeTrackColor: Colors.white,
-                    //   inactiveTrackColor: kLabelTextColor,
-                    //   trackHeight: 1,
-                    //   thumbShape: RoundSliderThumbShape(
-                    //     enabledThumbRadius: 16,
-                    //   ),
-                    //   thumbColor: kBottomContainerColor,
-                    // ),
                     child: Slider(
                       // label: '${bmiCalculatorBrain.height}',
                       value: bmiCalculatorBrain.height.toDouble(),
                       min: kMinHeight,
                       max: kMaxHeight,
-                      // mouseCursor: MaterialStateMouseCursor.textable,
                       onChanged: (double newValue) {
                         setState(() {
                           bmiCalculatorBrain.height = newValue.round();
@@ -135,15 +125,63 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
 
-          // Row # 3
+          // Row # 3: Weight and age Cards
           Expanded(
             child: Row(
               children: [
+                // Weight Card
                 Expanded(
                   child: ReusableCard(
                     color: kActiveCardColor,
+                    cardChild: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          'WEIGHT',
+                          style: kLabelTextStyle,
+                        ),
+                        Text(
+                          bmiCalculatorBrain.weight.toString(),
+                          style: kHeightAmountTextStyle,
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            FloatingActionButton(
+                              backgroundColor: kActiveCardColor,
+                              child: Icon(
+                                FontAwesomeIcons.minus,
+                                color: Colors.white,
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  bmiCalculatorBrain.reduceWeight();
+                                });
+                              },
+                            ),
+                            SizedBox(
+                              width: 20.0,
+                            ),
+                            FloatingActionButton(
+                              backgroundColor: kActiveCardColor,
+                              child: Icon(
+                                FontAwesomeIcons.plus,
+                                color: Colors.white,
+                              ),
+                              onPressed: () {
+                                setState(() {
+                                  bmiCalculatorBrain.increaseWeight();
+                                });
+                              },
+                            ),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
                 ),
+
+                // Age Card
                 Expanded(
                   child: ReusableCard(
                     color: kActiveCardColor,
