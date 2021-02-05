@@ -28,6 +28,7 @@ class BMICalculatorBrain {
   Color _femaleCardColor;
   bool _pressedMaleCard = false;
   bool _pressedFemaleCard = false;
+  int height = 170;
 
   // Constructor
   BMICalculatorBrain() {

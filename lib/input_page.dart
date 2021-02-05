@@ -1,5 +1,6 @@
 // Packages:
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 // Components:
@@ -80,16 +81,41 @@ class _InputPageState extends State<InputPage> {
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.end,
+                    crossAxisAlignment: CrossAxisAlignment.baseline,
+                    textBaseline: TextBaseline.alphabetic,
                     children: [
                       Text(
-                        '127',
+                        bmiCalculatorBrain.height.toString(),
                         style: kHeightAmountTextStyle,
                       ),
                       Text(
                         'cm',
+                        style: kLabelTextStyle,
                       ),
                     ],
+                  ),
+                  SliderTheme(
+                    data: SliderThemeData(
+                      activeTrackColor: Colors.white,
+                      inactiveTrackColor: kLabelTextColor,
+                      trackHeight: 1,
+                      thumbShape: RoundSliderThumbShape(
+                        enabledThumbRadius: 16,
+                      ),
+                      thumbColor: kBottomContainerColor,
+                    ),
+                    child: Slider(
+                      // label: '${bmiCalculatorBrain.height}',
+                      value: bmiCalculatorBrain.height.toDouble(),
+                      min: kMinHeight,
+                      max: kMaxHeight,
+                      // mouseCursor: MaterialStateMouseCursor.textable,
+                      onChanged: (double newValue) {
+                        setState(() {
+                          bmiCalculatorBrain.height = newValue.round();
+                        });
+                      },
+                    ),
                   )
                 ],
               ),
