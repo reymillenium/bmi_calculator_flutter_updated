@@ -23,16 +23,15 @@ class _InputPageState extends State<InputPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
       body: Column(
         children: [
-          // Row # 1
+          // Row # 1: Gender Cards
           Expanded(
             child: Row(
               children: [
+                // Male Card:
                 Expanded(
                   child: ReusableCard(
                     color: bmiCalculatorBrain.getMaleCardColor(),
@@ -47,6 +46,8 @@ class _InputPageState extends State<InputPage> {
                     },
                   ),
                 ),
+
+                // Female Card:
                 Expanded(
                   child: ReusableCard(
                     color: bmiCalculatorBrain.getFemaleCardColor(),
@@ -65,17 +66,18 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
 
-          // Row # 2
+          // Row # 2: Scroll bar
           Expanded(
-            child: Expanded(
-              child: ReusableCard(
-                color: kActiveCardColor,
-                cardChild: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text('HEIGHT'),
-                  ],
-                ),
+            child: ReusableCard(
+              color: kActiveCardColor,
+              cardChild: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'HEIGHT',
+                    style: kLabelTextStyle,
+                  ),
+                ],
               ),
             ),
           ),
