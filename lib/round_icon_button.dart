@@ -12,8 +12,8 @@ class RoundIconButton extends StatelessWidget {
 
   // Constructor:
   RoundIconButton({
-    this.icon,
-    this.onPressed,
+    @required this.icon,
+    @required this.onPressed,
   });
 
   @override
