@@ -145,6 +145,9 @@ class _InputPageState extends State<InputPage> {
                           bmiCalculatorBrain.weight.toString(),
                           style: kHeightAmountTextStyle,
                         ),
+                        SizedBox(
+                          height: 16.0,
+                        ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
@@ -186,6 +189,9 @@ class _InputPageState extends State<InputPage> {
                         Text(
                           bmiCalculatorBrain.age.toString(),
                           style: kHeightAmountTextStyle,
+                        ),
+                        SizedBox(
+                          height: 16.0,
                         ),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
