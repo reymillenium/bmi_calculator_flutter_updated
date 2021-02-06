@@ -22,7 +22,8 @@ class ResultsPage extends StatelessWidget {
           ),
           GestureDetector(
             onTap: () {
-              Navigator.pushNamed(context, '/input');
+              // Navigator.pushNamed(context, '/input');
+              Navigator.pop(context);
             },
             child: Container(
               color: kBottomContainerColor,
@@ -32,7 +33,7 @@ class ResultsPage extends StatelessWidget {
               child: Center(
                 child: Text(
                   'RE-CALCULATE',
-                  style: kCalculateTextStyle,
+                  style: kLargeButtonTextStyle,
                 ),
               ),
             ),

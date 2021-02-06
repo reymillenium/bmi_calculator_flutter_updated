@@ -17,9 +17,9 @@ const kHeightAmountTextStyle = TextStyle(
   color: Colors.white,
 );
 
-const kCalculateTextStyle = TextStyle(
-  fontSize: 26,
-  fontWeight: FontWeight.w900,
+const kLargeButtonTextStyle = TextStyle(
+  fontSize: 25,
+  fontWeight: FontWeight.bold,
   color: Colors.white,
 );
 
