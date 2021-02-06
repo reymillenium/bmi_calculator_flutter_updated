@@ -17,6 +17,12 @@ const kHeightAmountTextStyle = TextStyle(
   color: Colors.white,
 );
 
+const kCalculateTextStyle = TextStyle(
+  fontSize: 26,
+  fontWeight: FontWeight.w900,
+  color: Colors.white,
+);
+
 // * * * * * * * * * * * * * * * * * * * * * * * *
 // *                 Colors:                     *
 // * * * * * * * * * * * * * * * * * * * * * * * *
