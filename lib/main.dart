@@ -23,15 +23,14 @@ class BMICalculator extends StatelessWidget {
           floatingActionButtonTheme: FloatingActionButtonThemeData(
             backgroundColor: Colors.purple,
           )),
-      // theme: ThemeData.dark(),
       home: InputPage(title: 'BMI Calculator'),
 
-      initialRoute: '/input',
+      // initialRoute: '/input',
       // Routes
       routes: {
         // '/': (context) => InputPage(title: 'BMI Calculator'),
         '/results': (context) => ResultsPage(),
-        '/input': (context) => InputPage(title: 'BMI Calculator'),
+        // '/input': (context) => InputPage(title: 'BMI Calculator'),
       },
     );
   }
