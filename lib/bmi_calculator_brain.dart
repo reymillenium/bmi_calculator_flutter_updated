@@ -25,10 +25,10 @@ extension GenderExtension on Gender {
 
 class BMICalculatorBrain {
   // Private Properties
+  Gender _selectedGender;
   Color _maleCardColor;
   Color _femaleCardColor;
-  bool _pressedMaleCard = false;
-  bool _pressedFemaleCard = false;
+
   int _height = 170;
   int _weight = 60;
   int _age = 19;
@@ -38,6 +38,8 @@ class BMICalculatorBrain {
   BMICalculatorBrain() {
     this._maleCardColor = kInactiveCardColor;
     this._femaleCardColor = kInactiveCardColor;
+    this._selectedGender = Gender.male;
+    _updateColors();
   }
 
   // Getters:
@@ -85,13 +87,7 @@ class BMICalculatorBrain {
 
   // Public methods:
   void toggleGenderCards(Gender gender) {
-    if (gender.isMale) {
-      _pressedMaleCard = !_pressedMaleCard;
-      _pressedFemaleCard = false;
-    } else {
-      _pressedFemaleCard = !_pressedFemaleCard;
-      _pressedMaleCard = false;
-    }
+    _selectedGender = gender;
     _updateColors();
   }
 
@@ -122,7 +118,7 @@ class BMICalculatorBrain {
 
   // Private methods:
   void _updateColors() {
-    _maleCardColor = _pressedMaleCard ? kActiveCardColor : kInactiveCardColor;
-    _femaleCardColor = _pressedFemaleCard ? kActiveCardColor : kInactiveCardColor;
+    _maleCardColor = _selectedGender.isMale ? kActiveCardColor : kInactiveCardColor;
+    _femaleCardColor = _selectedGender.isFemale ? kActiveCardColor : kInactiveCardColor;
   }
 }
