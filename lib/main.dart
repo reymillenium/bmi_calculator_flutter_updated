@@ -24,6 +24,7 @@ class BMICalculator extends StatelessWidget {
             backgroundColor: Colors.purple,
           )),
       home: InputPage(title: 'BMI Calculator'),
+      debugShowCheckedModeBanner: false,
 
       // initialRoute: '/input',
       // Routes
