@@ -57,7 +57,8 @@ class ResultsPage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(12.0),
                     child: Text(
-                      'You have a higher than normal body weight. Try to exeercise more.',
+                      // 'You have a higher than normal body weight. Try to exercise more.',
+                      bmiCalculatorBrain.getInterpretation(),
                       style: kBMIInterpretationTextStyle,
                       textAlign: TextAlign.center,
                     ),
