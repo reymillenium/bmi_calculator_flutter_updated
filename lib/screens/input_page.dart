@@ -91,7 +91,7 @@ class _InputPageState extends State<InputPage> {
                     textBaseline: TextBaseline.alphabetic,
                     children: [
                       Text(
-                        bmiCalculatorBrain.height.toString(),
+                        bmiCalculatorBrain.getHeight().toString(),
                         style: kHeightAmountTextStyle,
                       ),
                       Text(
@@ -115,13 +115,13 @@ class _InputPageState extends State<InputPage> {
                       ),
                     ),
                     child: Slider(
-                      // label: '${bmiCalculatorBrain.height}',
-                      value: bmiCalculatorBrain.height.toDouble(),
+                      // label: '${bmiCalculatorBrain.getHeight()}',
+                      value: bmiCalculatorBrain.getHeight().toDouble(),
                       min: kMinHeight,
                       max: kMaxHeight,
                       onChanged: (double newValue) {
                         setState(() {
-                          bmiCalculatorBrain.height = newValue.round();
+                          bmiCalculatorBrain.setHeight(newValue.round());
                         });
                       },
                     ),
@@ -141,7 +141,7 @@ class _InputPageState extends State<InputPage> {
                     color: kActiveCardColor,
                     cardChild: ActionButtonsCardChild(
                       magnitudeLabel: 'WEIGHT',
-                      magnitudeText: bmiCalculatorBrain.weight.toString(),
+                      magnitudeText: bmiCalculatorBrain.getWeightText(),
                       onMinusPress: () {
                         setState(() {
                           bmiCalculatorBrain.reduceWeight();
@@ -162,7 +162,7 @@ class _InputPageState extends State<InputPage> {
                     color: kActiveCardColor,
                     cardChild: ActionButtonsCardChild(
                       magnitudeLabel: 'AGE',
-                      magnitudeText: bmiCalculatorBrain.age.toString(),
+                      magnitudeText: bmiCalculatorBrain.getAgeText(),
                       onMinusPress: () {
                         setState(() {
                           bmiCalculatorBrain.reduceAge();

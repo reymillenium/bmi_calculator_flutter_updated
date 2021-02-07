@@ -29,9 +29,9 @@ class BMICalculatorBrain {
   Color _femaleCardColor;
   bool _pressedMaleCard = false;
   bool _pressedFemaleCard = false;
-  int height = 170;
-  int weight = 60;
-  int age = 19;
+  int _height = 170;
+  int _weight = 60;
+  int _age = 19;
   double _bmi;
 
   // Constructor
@@ -49,22 +49,38 @@ class BMICalculatorBrain {
     return _femaleCardColor;
   }
 
-  // Setters
+  int getHeight() {
+    return _height;
+  }
+
+  String getWeightText() {
+    return _weight.toString();
+  }
+
+  String getAgeText() {
+    return _age.toString();
+  }
+
+  // Setters:
+  void setHeight(int newValue) {
+    _height = newValue;
+  }
+
   void reduceWeight() {
-    weight--;
+    _weight--;
   }
 
   void increaseWeight() {
-    weight++;
+    _weight++;
   }
 
   // Setters
   void reduceAge() {
-    age--;
+    _age--;
   }
 
   void increaseAge() {
-    age++;
+    _age++;
   }
 
   // Public methods:
@@ -80,7 +96,7 @@ class BMICalculatorBrain {
   }
 
   String calculateBMI() {
-    _bmi = weight / pow(height / 100, 2);
+    _bmi = _weight / pow(_height / 100, 2);
     return _bmi.toStringAsFixed(1);
   }
 
