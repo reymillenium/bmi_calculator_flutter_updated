@@ -9,6 +9,7 @@ import 'reusable_card.dart';
 import 'gender_card_child.dart';
 import 'constants.dart';
 import 'round_icon_button.dart';
+import 'bottom_button.dart';
 
 BMICalculatorBrain bmiCalculatorBrain = BMICalculatorBrain();
 
@@ -223,24 +224,11 @@ class _InputPageState extends State<InputPage> {
             ),
           ),
 
-          // Bottom Container:
-          GestureDetector(
-            onTap: () {
-              Navigator.pushNamed(context, '/results');
-            },
-            child: Container(
-              color: kBottomContainerColor,
-              margin: EdgeInsets.only(top: 10.0),
-              width: double.infinity,
-              height: kBottomContainerHeight,
-              padding: EdgeInsets.only(bottom: 20.0),
-              child: Center(
-                child: Text(
-                  'CALCULATE',
-                  style: kLargeButtonTextStyle,
-                ),
-              ),
-            ),
+          // Calculate Button
+          BottomButton(
+            label: 'CALCULATE',
+            isPushingRoute: true,
+            route: '/results',
           ),
         ],
       ),
