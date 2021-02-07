@@ -30,7 +30,7 @@ class BMICalculatorBrain {
   Color _femaleCardColor;
 
   int _height = 170;
-  int _weight = 60;
+  int _weight = 102;
   int _age = 19;
   double _bmi;
 
@@ -92,7 +92,10 @@ class BMICalculatorBrain {
   }
 
   String calculateBMI() {
-    _bmi = _weight / pow(_height / 100, 2);
+    // Classical BMI formula (Kg & cms)
+    // _bmi = _weight / pow(_height / 100, 2);
+    // New BMI formula (Kg & cms)
+    _bmi = 1.3 * _weight / pow(_height / 100, 2.5);
     return _bmi.toStringAsFixed(1);
   }
 
