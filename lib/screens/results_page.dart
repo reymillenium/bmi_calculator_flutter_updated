@@ -1,4 +1,5 @@
 // Packages:
+import 'package:bmi_calculator_flutter_updated/screens/input_page.dart';
 import 'package:flutter/material.dart';
 
 // Components:
@@ -44,11 +45,13 @@ class ResultsPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'OVERWEIGHT',
+                    // 'OVERWEIGHT',
+                    bmiCalculatorBrain.getResult(),
                     style: kBMIClassificationTextStyle,
                   ),
                   Text(
-                    '26.7',
+                    // '26.7',
+                    bmiCalculatorBrain.calculateBMI(),
                     style: kHugeNumbersTextStyle,
                   ),
                   Padding(
@@ -67,7 +70,9 @@ class ResultsPage extends StatelessWidget {
           // Re-Calculate Button
           BottomButton(
             label: 'RE-CALCULATE',
-            isPushingRoute: false,
+            onTap: () {
+              Navigator.pop(context);
+            },
           ),
         ],
       ),

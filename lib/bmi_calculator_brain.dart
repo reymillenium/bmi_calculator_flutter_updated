@@ -1,5 +1,6 @@
 // Packages:
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 // Constants:
 import 'package:bmi_calculator_flutter_updated/constants.dart';
@@ -31,6 +32,7 @@ class BMICalculatorBrain {
   int height = 170;
   int weight = 60;
   int age = 19;
+  double _bmi;
 
   // Constructor
   BMICalculatorBrain() {
@@ -75,6 +77,21 @@ class BMICalculatorBrain {
       _pressedMaleCard = false;
     }
     _updateColors();
+  }
+
+  String calculateBMI() {
+    _bmi = weight / pow(height / 100, 2);
+    return _bmi.toStringAsFixed(1);
+  }
+
+  String getResult() {
+    if (_bmi >= 25) {
+      return 'OVERWEIGHT';
+    } else if (_bmi >= 18.5) {
+      return 'NORMAL';
+    } else {
+      return 'UNDERWEIGHT';
+    }
   }
 
   // Private methods:

@@ -183,8 +183,12 @@ class _InputPageState extends State<InputPage> {
           // Calculate Button
           BottomButton(
             label: 'CALCULATE',
-            isPushingRoute: true,
-            route: '/results',
+            onTap: () {
+              setState(() {
+                bmiCalculatorBrain.calculateBMI();
+              });
+              Navigator.pushNamed(context, '/results');
+            },
           ),
         ],
       ),

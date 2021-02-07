@@ -7,22 +7,18 @@ import 'package:bmi_calculator_flutter_updated/constants.dart';
 class BottomButton extends StatelessWidget {
   // Properties:
   final String label;
-  final String route;
-  final bool isPushingRoute;
+  final VoidCallback onTap;
 
   // Constructor:
   BottomButton({
     this.label = '',
-    this.isPushingRoute,
-    this.route,
+    this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        isPushingRoute ? Navigator.pushNamed(context, route) : Navigator.pop(context);
-      },
+      onTap: onTap,
       child: Container(
         color: kBottomContainerColor,
         margin: EdgeInsets.only(top: 10.0),
