@@ -33,11 +33,12 @@ class ResultsPage extends StatelessWidget {
 
           // Reusable Card: MBI Data
           Expanded(
-            flex: 6,
+            flex: 5,
             child: ReusableCard(
               color: kActiveCardColor,
               cardChild: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
                     'OVERWEIGHT',
@@ -51,7 +52,7 @@ class ResultsPage extends StatelessWidget {
                     padding: const EdgeInsets.all(12.0),
                     child: Text(
                       'You have a higher than normal body weight. Try to exeercise more.',
-                      style: kBMIExplanationTextStyle,
+                      style: kBMIInterpretationTextStyle,
                       textAlign: TextAlign.center,
                     ),
                   ),

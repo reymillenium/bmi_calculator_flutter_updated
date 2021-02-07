@@ -11,9 +11,9 @@ const kLabelTextStyle = TextStyle(
   color: Color(0xFF8D8E98),
 );
 
-const kBMIExplanationTextStyle = TextStyle(
+const kBMIInterpretationTextStyle = TextStyle(
   fontSize: 22,
-  color: Color(0xFF8D8E98),
+  // color: Color(0xFF8D8E98),
 );
 
 const kHeightAmountTextStyle = TextStyle(
@@ -23,14 +23,14 @@ const kHeightAmountTextStyle = TextStyle(
 );
 
 const kHugeNumbersTextStyle = TextStyle(
-  fontSize: 80,
-  fontWeight: FontWeight.w900,
+  fontSize: 100,
+  fontWeight: FontWeight.bold,
   color: Colors.white,
 );
 
 const kBigTitleTextStyle = TextStyle(
-  fontSize: 42,
-  fontWeight: FontWeight.w900,
+  fontSize: 50,
+  fontWeight: FontWeight.bold,
   color: Colors.white,
 );
 
@@ -41,9 +41,9 @@ const kLargeButtonTextStyle = TextStyle(
 );
 
 const kBMIClassificationTextStyle = TextStyle(
-  fontSize: 24,
+  fontSize: 22,
   fontWeight: FontWeight.bold,
-  color: Colors.green,
+  color: kGreenResultsColor,
 );
 
 // * * * * * * * * * * * * * * * * * * * * * * * *
@@ -55,6 +55,7 @@ const Color kTranslucentBottomContainerColor = Color(0x29EB1555);
 const Color kBottomContainerColor = Color(0xFFEB1555);
 const Color kLabelTextColor = Color(0xFF8D8E98);
 const Color kLightButtonColor = Color(0xFF4C4F5E);
+const Color kGreenResultsColor = Color(0xFF24D876);
 
 // * * * * * * * * * * * * * * * * * * * * * * * *
 // *               Magnitudes:                   *
