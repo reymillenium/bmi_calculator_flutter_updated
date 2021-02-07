@@ -10,6 +10,7 @@ import 'gender_card_child.dart';
 import 'constants.dart';
 import 'round_icon_button.dart';
 import 'bottom_button.dart';
+import 'action_buttons_card_child.dart';
 
 BMICalculatorBrain bmiCalculatorBrain = BMICalculatorBrain();
 
@@ -135,43 +136,19 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ReusableCard(
                     color: kActiveCardColor,
-                    cardChild: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'WEIGHT',
-                          style: kLabelTextStyle,
-                        ),
-                        Text(
-                          bmiCalculatorBrain.weight.toString(),
-                          style: kHeightAmountTextStyle,
-                        ),
-                        SizedBox(
-                          height: 16.0,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            RoundIconButton(
-                                icon: FontAwesomeIcons.minus,
-                                onPressed: () {
-                                  setState(() {
-                                    bmiCalculatorBrain.reduceWeight();
-                                  });
-                                }),
-                            SizedBox(
-                              width: 20.0,
-                            ),
-                            RoundIconButton(
-                                icon: FontAwesomeIcons.plus,
-                                onPressed: () {
-                                  setState(() {
-                                    bmiCalculatorBrain.increaseWeight();
-                                  });
-                                }),
-                          ],
-                        )
-                      ],
+                    cardChild: ActionButtonsCardChild(
+                      magnitudeLabel: 'WEIGHT',
+                      magnitudeText: bmiCalculatorBrain.weight.toString(),
+                      onMinusPress: () {
+                        setState(() {
+                          bmiCalculatorBrain.reduceWeight();
+                        });
+                      },
+                      onAddPress: () {
+                        setState(() {
+                          bmiCalculatorBrain.increaseWeight();
+                        });
+                      },
                     ),
                   ),
                 ),
@@ -180,43 +157,19 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ReusableCard(
                     color: kActiveCardColor,
-                    cardChild: Column(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          'AGE',
-                          style: kLabelTextStyle,
-                        ),
-                        Text(
-                          bmiCalculatorBrain.age.toString(),
-                          style: kHeightAmountTextStyle,
-                        ),
-                        SizedBox(
-                          height: 16.0,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            RoundIconButton(
-                                icon: FontAwesomeIcons.minus,
-                                onPressed: () {
-                                  setState(() {
-                                    bmiCalculatorBrain.reduceAge();
-                                  });
-                                }),
-                            SizedBox(
-                              width: 20.0,
-                            ),
-                            RoundIconButton(
-                                icon: FontAwesomeIcons.plus,
-                                onPressed: () {
-                                  setState(() {
-                                    bmiCalculatorBrain.increaseAge();
-                                  });
-                                }),
-                          ],
-                        )
-                      ],
+                    cardChild: ActionButtonsCardChild(
+                      magnitudeLabel: 'AGE',
+                      magnitudeText: bmiCalculatorBrain.age.toString(),
+                      onMinusPress: () {
+                        setState(() {
+                          bmiCalculatorBrain.reduceAge();
+                        });
+                      },
+                      onAddPress: () {
+                        setState(() {
+                          bmiCalculatorBrain.increaseAge();
+                        });
+                      },
                     ),
                   ),
                 ),
