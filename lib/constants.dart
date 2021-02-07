@@ -11,16 +11,39 @@ const kLabelTextStyle = TextStyle(
   color: Color(0xFF8D8E98),
 );
 
+const kBMIExplanationTextStyle = TextStyle(
+  fontSize: 22,
+  color: Color(0xFF8D8E98),
+);
+
 const kHeightAmountTextStyle = TextStyle(
   fontSize: 50,
   fontWeight: FontWeight.w900,
   color: Colors.white,
 );
 
+const kHugeNumbersTextStyle = TextStyle(
+  fontSize: 80,
+  fontWeight: FontWeight.w900,
+  color: Colors.white,
+);
+
+const kBigTitleTextStyle = TextStyle(
+  fontSize: 42,
+  fontWeight: FontWeight.w900,
+  color: Colors.white,
+);
+
 const kLargeButtonTextStyle = TextStyle(
-  fontSize: 25,
+  fontSize: 24,
   fontWeight: FontWeight.bold,
   color: Colors.white,
+);
+
+const kBMIClassificationTextStyle = TextStyle(
+  fontSize: 24,
+  fontWeight: FontWeight.bold,
+  color: Colors.green,
 );
 
 // * * * * * * * * * * * * * * * * * * * * * * * *

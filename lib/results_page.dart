@@ -16,10 +16,51 @@ class ResultsPage extends StatelessWidget {
         title: Text('BMI Calculator'),
       ),
       body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
+          // Results Title
           Expanded(
-            child: ReusableCard(color: kActiveCardColor),
+            flex: 1,
+            child: Container(
+              child: Center(
+                child: Text(
+                  'Your Result',
+                  style: kBigTitleTextStyle,
+                ),
+              ),
+            ),
           ),
+
+          // Reusable Card: MBI Data
+          Expanded(
+            flex: 6,
+            child: ReusableCard(
+              color: kActiveCardColor,
+              cardChild: Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Text(
+                    'OVERWEIGHT',
+                    style: kBMIClassificationTextStyle,
+                  ),
+                  Text(
+                    '26.7',
+                    style: kHugeNumbersTextStyle,
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(12.0),
+                    child: Text(
+                      'You have a higher than normal body weight. Try to exeercise more.',
+                      style: kBMIExplanationTextStyle,
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+
+          // Re-Calculate
           GestureDetector(
             onTap: () {
               // Navigator.pushNamed(context, '/input');
@@ -30,6 +71,7 @@ class ResultsPage extends StatelessWidget {
               margin: EdgeInsets.only(top: 10.0),
               width: double.infinity,
               height: kBottomContainerHeight,
+              padding: EdgeInsets.only(bottom: 20.0),
               child: Center(
                 child: Text(
                   'RE-CALCULATE',
