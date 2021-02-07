@@ -4,12 +4,16 @@ import 'package:flutter/rendering.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 // Components:
-import 'bmi_calculator_brain.dart';
-import 'reusable_card.dart';
-import 'gender_card_child.dart';
-import 'constants.dart';
-import 'bottom_button.dart';
-import 'action_buttons_card_child.dart';
+import 'package:bmi_calculator_flutter_updated/components/reusable_card.dart';
+import 'package:bmi_calculator_flutter_updated/components/gender_card_child.dart';
+import 'package:bmi_calculator_flutter_updated/components/bottom_button.dart';
+import 'package:bmi_calculator_flutter_updated/components/action_buttons_card_child.dart';
+
+// Brain:
+import 'package:bmi_calculator_flutter_updated/bmi_calculator_brain.dart';
+
+// Constants
+import 'package:bmi_calculator_flutter_updated/constants.dart';
 
 BMICalculatorBrain bmiCalculatorBrain = BMICalculatorBrain();
 

@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-// Components:
-import 'constants.dart';
+// Constants:
+import 'package:bmi_calculator_flutter_updated/constants.dart';
 
 class GenderCardChild extends StatelessWidget {
   // Properties:

@@ -2,10 +2,14 @@
 import 'package:flutter/material.dart';
 
 // Components:
-import 'bmi_calculator_brain.dart';
-import 'reusable_card.dart';
-import 'constants.dart';
-import 'bottom_button.dart';
+import 'package:bmi_calculator_flutter_updated/components/reusable_card.dart';
+import 'package:bmi_calculator_flutter_updated/components/bottom_button.dart';
+
+// Brain:
+import 'package:bmi_calculator_flutter_updated/bmi_calculator_brain.dart';
+
+// Constants:
+import 'package:bmi_calculator_flutter_updated/constants.dart';
 
 class ResultsPage extends StatelessWidget {
   @override

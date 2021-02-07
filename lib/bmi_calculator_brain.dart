@@ -1,8 +1,8 @@
 // Packages:
 import 'package:flutter/material.dart';
 
-// Components:
-import 'constants.dart';
+// Constants:
+import 'package:bmi_calculator_flutter_updated/constants.dart';
 
 // Enums:
 enum Gender { male, female }
